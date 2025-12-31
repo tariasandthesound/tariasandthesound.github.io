@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EPK — Tarias and the Sound</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="Tarias and the Sound">
+      <img class="brand-logo" src="assets/img/tarias-logo.svg" alt="Tarias and the Sound">
+    </a>
+
+    <div class="nav-links">
+      <a href="discography.html">Discography</a>
+      <a href="video.html">Video</a>
+      <a href="shop.html">Shop</a>
+      <a href="epk.html">EPK</a>
+      <a href="booking.html">Booking</a>
+    </div>
+  </nav>
+</header>
+
+  <main class="container">
+    <div class="page-title">Tarias and the EPK</div>
+
+    <section class="epk-grid">
+      <div class="epk-card">
+        <h2 class="epk-h">Contact</h2>
+        <p class="epk-p">
+          Email: <a href="mailto:tariasandthesound@gmail.com"><u>tariasandthesound@gmail.com</u></a><br>
+          Location: <span style="color: rgba(17,17,17,.65);">Add your home base city/state</span><br>
+          Booking: <a href="booking.html"><u>Booking form</u></a>
+        </p>
+      </div>
+
+      <div class="epk-card">
+        <h2 class="epk-h">Short bio</h2>
+        <p class="epk-p" style="color: rgba(17,17,17,.65);">
+          Add a 2–4 sentence bio here. Keep it simple and specific: sound + vibe + context.
+        </p>
+      </div>
+
+      <div class="epk-card">
+        <h2 class="epk-h">Performance formats</h2>
+        <ul class="epk-list">
+          <li>Solo (vocals + guitar / keys)</li>
+          <li>Duo</li>
+          <li>Full band</li>
+          <li>Custom instrumentation available</li>
+        </ul>
+      </div>
+
+      <div class="epk-card">
+        <h2 class="epk-h">Press photos</h2>
+        <p class="epk-p" style="color: rgba(17,17,17,.65);">
+          Add 2–4 downloadable photos here later. (We’ll do this next.)
+        </p>
+      </div>
+    </section>
+
+    <section style="margin-top: 18px;">
+      <h2 class="epk-h">Selected videos</h2>
+      <p class="helper-text">Choose 2–3 videos that best represent your live show and sound.</p>
+
+      <div class="video-grid">
+        <!-- Replace these IDs with your top 2–3 videos -->
+        <div class="embed"><iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe></div>
+        <div class="embed"><iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Tarias and the Sound
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
