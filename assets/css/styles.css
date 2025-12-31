@@ -36,48 +36,54 @@ body{
 a{ color:inherit; text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
-/* Header / nav */
+/* ---------- Header (logo + nav) ---------- */
+
 .site-header{
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(10px);
+  background: #fff;
   border-bottom: 1px solid var(--border);
-  z-index: 10;
 }
 
 .nav{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 14px 16px;
-  display:flex;
-  align-items:center;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
 
 .brand{
-  font-size:14px;
-  letter-spacing:.8px;
-  text-transform: uppercase;
-  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.brand-logo{
+  height: 30px;     /* adjust to taste: 26–34px */
+  width: auto;
+  display: block;
 }
 
 .nav-links{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  font-size:14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;  /* allows wrapping on small screens */
+  justify-content: flex-end;
 }
 
-.nav-links a{ color: var(--muted); }
-.nav-links a:hover{ color: var(--fg); text-decoration:none; }
-
-.container{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 26px 16px 60px;
+.nav-links a{
+  text-decoration: none;
+  color: var(--fg);
+  font-size: 16px;
+  padding: 2px 0;
 }
+
+.nav-links a:hover{
+  opacity: .7;
+}
+
 
 /* Page title: "Tarias and the _____" */
 .page-title{
@@ -292,3 +298,106 @@ a:hover{ text-decoration:underline; }
   font-size: 14px;
   line-height: 1.6;
 }
+/* ---------- Home layout (wave-to-earth style) ---------- */
+
+.home-page .container{ /* Home no longer uses .container */
+  padding: 0;
+}
+
+.home-main{
+  min-height: calc(100vh - 52px); /* approximate header height */
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.home-hero{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0;
+}
+
+
+.home-page .home-photo{
+  width: 100vw;
+  height: calc(100vh - 140px);
+  object-fit: cover;
+  object-position: center 57%;
+  display: block;
+}
+
+
+
+
+.home-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px 16px;
+  max-width: var(--max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-socials{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.home-credit{
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px)
+  .home-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px 16px;
+  width: 100%;
+}
+.home-socials{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-credit{
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+  text-align: right;
+}
+/* ---------- Social icons ---------- */
+
+.home-socials.icons{
+  gap: 14px;
+}
+
+.home-socials.icons a{
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+  transition: transform .12s ease, opacity .12s ease;
+}
+
+.home-socials.icons svg{
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.home-socials.icons a:hover{
+  transform: translateY(-1px);
+  opacity: .7;
+}
+
