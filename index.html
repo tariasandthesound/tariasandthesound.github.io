@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarias and the Sound</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">Tarias and the Sound</div>
+
+      <div class="nav-links">
+        <a href="discography.html">Discography</a>
+        <a href="video.html">Video</a>
+        <a href="shop.html">Shop</a>
+        <a href="epk.html">EPK</a>
+        <a href="booking.html">Booking</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-title">Tarias and the Sound</div>
+
+    <section class="home">
+      <img class="home-photo" src="assets/img/hero.jpg" alt="Artist photo of Tarias">
+
+      <div class="social-row">
+        <a class="pill" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a class="pill" href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
+        <a class="pill" href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <a class="pill" href="https://bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Tarias and the Sound
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

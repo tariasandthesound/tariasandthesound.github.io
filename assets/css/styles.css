@@ -1,0 +1,294 @@
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Storybook";
+  src: url("../fonts/storybook.woff2") format("woff2"),
+       url("../fonts/storybook.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Work Sans (body font) */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+
+:root{
+  --bg:#ffffff;
+  --fg:#111111;
+  --muted: rgba(17,17,17,.65);
+  --border: rgba(17,17,17,.12);
+  --max: 980px;
+
+  --font-body: "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Storybook", "Work Sans", system-ui, sans-serif;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family: var(--font-body);
+  letter-spacing: 0.1px;
+}
+
+a{ color:inherit; text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* Header / nav */
+.site-header{
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand{
+  font-size:14px;
+  letter-spacing:.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav-links{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.nav-links a{ color: var(--muted); }
+.nav-links a:hover{ color: var(--fg); text-decoration:none; }
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 26px 16px 60px;
+}
+
+/* Page title: "Tarias and the _____" */
+.page-title{
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: .6px;
+  margin: 18px 0 18px;
+  text-transform: uppercase;
+}
+
+/* Home photo */
+.home{
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding-top: 16px;
+}
+
+.home-photo{
+  width: min(520px, 92vw);
+  height:auto;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  display:block;
+}
+
+/* Social buttons */
+.social-row{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--fg);
+  background: transparent;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.pill:hover{
+  transform: translateY(-1px);
+  background: rgba(17,17,17,.04);
+  border-color: rgba(17,17,17,.22);
+  text-decoration:none;
+}
+
+.footer{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px 16px 50px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+/* ---------- Discography ---------- */
+
+.platform-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  margin: 10px 0 10px;
+}
+
+.helper-text{
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Album grid */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 760px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+.album{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+
+.album:hover{
+  transform: translateY(-2px);
+  border-color: rgba(17,17,17,.22);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  text-decoration: none;
+}
+
+.album img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display:block;
+}
+
+.meta{
+  padding: 10px 12px 12px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.title{
+  font-size: 13px;
+  color: var(--fg);
+}
+
+.year{
+  font-size: 12px;
+  color: var(--muted);
+}
+/* ---------- Video page ---------- */
+
+.video-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 760px){
+  .video-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.embed{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* ---------- Booking ---------- */
+
+.form-wrap{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+}
+
+.form-wrap iframe{
+  width: 100%;
+  height: 1100px; /* adjust later */
+  border: 0;
+  display: block;
+}
+/* ---------- EPK ---------- */
+
+.epk-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 760px){
+  .epk-grid{ grid-template-columns: 1fr; }
+}
+
+.epk-card{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+  background: white;
+}
+
+.epk-h{
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: .5px;
+}
+
+.epk-p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.epk-list{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(17,17,17,.75);
+  font-size: 14px;
+  line-height: 1.6;
+}
