@@ -7,42 +7,61 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-  <header class="site-header">
-    <nav class="nav">
-      <div class="brand">Tarias and the Sound</div>
+<body class="home-page">
 
-      <div class="nav-links">
-        <a href="discography.html">Discography</a>
-        <a href="video.html">Video</a>
-        <a href="shop.html">Shop</a>
-        <a href="epk.html">EPK</a>
-        <a href="booking.html">Booking</a>
-      </div>
-    </nav>
-  </header>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="Tarias and the Sound">
+      <img class="brand-logo" src="assets/img/tarias-logo.svg" alt="Tarias and the Sound">
+    </a>
 
-  <main class="container">
-    <div class="page-title">Tarias and the Sound</div>
+    <div class="nav-links">
+      <a href="discography.html">Discography</a>
+      <a href="video.html">Video</a>
+      <a href="shop.html">Shop</a>
+      <a href="epk.html">EPK</a>
+      <a href="booking.html">Booking</a>
+    </div>
+  </nav>
+</header>
 
-    <section class="home">
-      <img class="home-photo" src="assets/img/hero.jpg" alt="Artist photo of Tarias">
+<main class="home-main">
+  <section class="home-hero">
+    <img class="home-photo" src="assets/img/hero.jpg" alt="Artist photo of Tarias">
+  </section>
 
-      <div class="social-row">
-        <a class="pill" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill" href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
-        <a class="pill" href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
-        <a class="pill" href="https://bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
-      </div>
-    </section>
-  </main>
+ <section class="home-bottom">
+  <div class="home-socials icons">
+    <a href="https://open.spotify.com/artist/6ldmy8GsDhbxdPvgiFMa3H?si=9dIk3ziiSeKRGTvSmM281w" aria-label="Spotify" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 0C5.372 0 0 5.373 0 12c0 6.628 5.372 12 12 12s12-5.372 12-12C24 5.373 18.628 0 12 0zm5.53 17.318c-.218.36-.684.474-1.043.256-2.858-1.747-6.46-2.144-10.706-1.18-.41.094-.82-.163-.913-.574-.094-.41.163-.82.574-.913 4.63-1.056 8.59-.604 11.726 1.315.36.218.474.685.256 1.096zm1.49-3.318c-.274.444-.86.582-1.304.308-3.272-2.01-8.26-2.594-12.128-1.422-.49.15-1.01-.128-1.16-.618-.15-.49.128-1.01.618-1.16 4.417-1.34 9.91-.694 13.64 1.57.445.274.582.86.308 1.322zm.13-3.456C15.26 8.4 8.38 8.236 4.76 9.332c-.588.18-1.21-.152-1.39-.74-.18-.588.152-1.21.74-1.39 4.155-1.26 11.73-1.02 16.12 1.6.53.316.702 1.002.386 1.53-.316.53-1.002.702-1.53.386z"/>
+      </svg>
+    </a>
 
-  <footer class="footer">
-    © <span id="year"></span> Tarias and the Sound
-  </footer>
+    <a href="https://www.youtube.com/@tariasandthesound" aria-label="YouTube" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M23.498 6.186a3.012 3.012 0 00-2.12-2.132C19.507 3.5 12 3.5 12 3.5s-7.507 0-9.378.554A3.012 3.012 0 00.502 6.186C0 8.062 0 12 0 12s0 3.938.502 5.814a3.012 3.012 0 002.12 2.132C4.493 20.5 12 20.5 12 20.5s7.507 0 9.378-.554a3.012 3.012 0 002.12-2.132C24 15.938 24 12 24 12s0-3.938-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+    </a>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    <a href="https://www.instagram.com/tariasandthesound" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.343 3.608 1.318.975.975 1.256 2.242 1.318 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.343 2.633-1.318 3.608-.975.975-2.242 1.256-3.608 1.318-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.343-3.608-1.318-.975-.975-1.256-2.242-1.318-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.343-2.633 1.318-3.608.975-.975 2.242-1.256 3.608-1.318C8.416 2.175 8.796 2.163 12 2.163z"/>
+      </svg>
+    </a>
+
+    <a href="https://www.tiktok.com/@tariasandthesound" aria-label="TikTok" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 8.153a6.707 6.707 0 01-4.02-1.332v7.708a6.818 6.818 0 11-6.818-6.818c.24 0 .477.02.71.06v3.57a3.236 3.236 0 103.236 3.236V0h3.892a6.706 6.706 0 003.0 5.7z"/>
+      </svg>
+    </a>
+
+    <a href="https://www.facebook.com/tariasandthesound" aria-label="Facebook" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="home-credit">Photo by Aidan Connolly</div>
+</section>
