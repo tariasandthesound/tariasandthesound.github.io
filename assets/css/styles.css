@@ -144,80 +144,46 @@ a:hover{ text-decoration:underline; }
   color: var(--muted);
   font-size: 12px;
 }
-/* ---------- Discography ---------- */
+/* ---------- Discography grid (covers only) ---------- */
 
-.platform-row{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  justify-content:flex-start;
-  margin: 10px 0 10px;
+.discography-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  max-width: var(--max);
+  margin: 0 auto;
 }
 
-.helper-text{
-  margin: 6px 0 14px;
-  color: var(--muted);
-  font-size: 13px;
+.release{
+  display: block;
 }
 
-/* Album grid */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-@media (max-width: 760px){
-  .grid{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 420px){
-  .grid{ grid-template-columns: 1fr; }
-}
-
-.album{
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  background: white;
-  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
-}
-
-.album:hover{
-  transform: translateY(-2px);
-  border-color: rgba(17,17,17,.22);
-  box-shadow: 0 10px 26px rgba(0,0,0,.08);
-  text-decoration: none;
-}
-
-.album img{
+.cover{
   width: 100%;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.cover img{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display:block;
+  display: block;
+  transition: transform .15s ease, opacity .15s ease;
 }
 
-.meta{
-  padding: 10px 12px 12px;
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 10px;
+.release:hover img{
+  transform: scale(1.03);
+  opacity: .9;
 }
 
-.title{
-  font-size: 13px;
-  color: var(--fg);
-}
-
-.year{
-  font-size: 12px;
-  color: var(--muted);
-}
 /* ---------- Video page ---------- */
 
 .video-grid{
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 14px;
 }
 
@@ -298,7 +264,7 @@ a:hover{ text-decoration:underline; }
   font-size: 14px;
   line-height: 1.6;
 }
-/* ---------- Home layout (wave-to-earth style) ---------- */
+/* ---------- Home layout ---------- */
 
 .home-page .container{ /* Home no longer uses .container */
   padding: 0;
@@ -401,3 +367,28 @@ a:hover{ text-decoration:underline; }
   opacity: .7;
 }
 
+/* ---------- EPK Press Photos ---------- */
+
+.press-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.press-grid img{
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #f2f2f2;
+  transition: opacity .15s ease;
+}
+
+.press-grid a:hover img{
+  opacity: .85;
+}
+
+.epk-download{
+  margin-top: 12px;
+  font-size: 14px;
+}
